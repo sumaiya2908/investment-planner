@@ -8,6 +8,9 @@ const InputForm = () => {
 	const [fields, setFields] = useState({});
 	const [data, setData] = useState();
 	const [loading, setLoading] = useState(false)
+
+	useEffect(() => {
+	}, [fields]);
 	//when the input is change, loader is displayed
 	const handleChange = (e) => {
 		setData(null)
