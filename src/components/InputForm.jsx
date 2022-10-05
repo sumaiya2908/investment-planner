@@ -32,7 +32,6 @@ const InputForm = () => {
 			setLoading(false)
 		});
 
-
 	}, [fields]);
 
 	//when the input is change, loader is displayed
