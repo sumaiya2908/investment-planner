@@ -10,6 +10,12 @@ const InputForm = () => {
 	const [loading, setLoading] = useState(false)
 
 	useEffect(() => {
+		//if any of the fields are empty, set data to null
+		if (!(fields.initialInvestment) || !(fields.monthlyInvestment)) {
+			setData(null)
+			setLoading(false)
+			return
+		}
 	}, [fields]);
 	//when the input is change, loader is displayed
 	const handleChange = (e) => {
