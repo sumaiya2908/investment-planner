@@ -50,15 +50,6 @@ const getChartData = (data) => {
 				},
 				offset: true,
 			},
-			yAxis: {
-				ticks: {
-					format: {
-						style: 'currency',
-						currency: 'SGD'
-					},
-					precision: 2
-				}
-			}
 		},
 		layout: {
 			padding: {
