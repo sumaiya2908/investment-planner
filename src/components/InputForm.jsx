@@ -16,7 +16,13 @@ const InputForm = () => {
 			setLoading(false)
 			return
 		}
+
+		const param = {
+			initialInvestment: fields.initialInvestment,
+			monthlyInvestment: fields.monthlyInvestment,
+		};
 	}, [fields]);
+
 	//when the input is change, loader is displayed
 	const handleChange = (e) => {
 		setData(null)
