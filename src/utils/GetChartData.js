@@ -54,7 +54,7 @@ const getChartData = (data) => {
 				ticks: {
 					format: {
 						style: 'currency',
-						currency: 'en-SGD'
+						currency: 'SGD'
 					},
 					precision: 2
 				}
