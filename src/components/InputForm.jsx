@@ -3,10 +3,27 @@ import axios from "axios";
 
 import Chart from "./Chart";
 import { debounce } from "lodash";
+
 const InputForm = () => {
 	const [fields, setFields] = useState({});
 	const [data, setData] = useState();
 	const [loading, setLoading] = useState(false)
+	//when the input is change, loader is displayed
+	const handleChange = (e) => {
+		setData(null)
+		setLoading(true)
+		debounceData(e)
+	}
+
+	//wait for 600ms to set the fields, and then request the data from api
+	const debounceData = debounce((e) => {
+		const { name, value } = e.target;
+		setFields((prev) => ({
+			...prev,
+			[name]: value || 0,
+		}));
+	}, 600);
+
 	return (
 		<>
 			<form className='form container'>
