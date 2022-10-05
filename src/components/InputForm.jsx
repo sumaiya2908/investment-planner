@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import Chart from "./Chart";
+import { debounce } from "lodash";
 const InputForm = () => {
 	const [fields, setFields] = useState({});
+	const [data, setData] = useState();
+	const [loading, setLoading] = useState(false)
 	return (
 		<>
 			<form className='form container'>
@@ -27,6 +31,9 @@ const InputForm = () => {
 				</div>
 			</form>
 
+			{!(data) && <div className='starter-text'> Enter the values to calculate your investment</div>}
+
+			<Chart data={data} loading={loading} />
 		</>
 	);
 };
