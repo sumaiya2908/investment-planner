@@ -94,7 +94,7 @@ body {
 
 /* Media Queries */
 
-@media only screen and (min-device-width: 350px) {
+@media only screen and (max-device-width: 500px) {
 	.form {
 		flex-direction: column;
 	}
