@@ -11,9 +11,11 @@
 ### Project Preview
 ![input-form](/images/input-form.png)
 
-![chart-loading](/images/chart-loading.png)
+![chart-loading](/images/loader.png)
 
 ![chart-preview](/images/chart-preview.png)
+
+![tooltip](/images/tooltip.png)
 
 
 ### Steps to Install:
