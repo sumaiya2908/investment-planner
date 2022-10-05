@@ -21,6 +21,18 @@ const InputForm = () => {
 			initialInvestment: fields.initialInvestment,
 			monthlyInvestment: fields.monthlyInvestment,
 		};
+
+		//send request to mocky.io end point and set the data
+		let request = axios({
+			url: "http://www.mocky.io/v2/5e69de892d00007a005f9e29",
+			method: "post",
+			data: param,
+		}).then(({ data }) => {
+			setData(data);
+			setLoading(false)
+		});
+
+
 	}, [fields]);
 
 	//when the input is change, loader is displayed
